@@ -1,0 +1,75 @@
+.container {
+  border: 1px solid blue;
+  display: flex;
+}
+
+.container > * {
+  border: 1px solid red;
+}
+
+/* flex-container */
+.flex-container {
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-container > aside {
+  height: 200px;
+}
+
+.flex-container > div {
+  height: 300px;
+}
+
+/* flex-container02 */
+.flex-container-02 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: end;
+    height: 110px;
+    justify-content: space-around;
+}
+
+/* flex-container03 */
+.flex-container-03 {
+  flex-wrap: wrap;
+}
+.flex-container-03 .item1 {
+  order: 1;
+}
+.flex-container-03 .item5 {
+  order: 4;
+}
+
+.flex-container-03 > div {
+  flex-grow: 1;
+}
+.flex-container-03 .item3 {
+  flex-grow: 3;
+}
+
+/* flex-container04 */
+.flex-container-04 {
+  flex-wrap: nowrap;
+  height: 350px;
+}
+
+.flex-container-04 .item1 {
+  height: 200px;
+}
+.flex-container-04 .item2 {
+  align-self: stretch;
+}
+.flex-container-04 .item3 {
+  height: 50px;
+}
+.flex-container-04 .item4 {
+  height: 300px;
+  align-self: end;
+}
+.flex-container-04 .item5 {
+  height: 100px;
+  align-self: center;
+}
