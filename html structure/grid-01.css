@@ -1,0 +1,141 @@
+.container {
+  border: 1px dashed blue;
+  background: #0000ff0a;
+  display: grid;
+}
+
+.container > * {
+  border: 1px solid #83e1c7;
+  background: #83e1c76b;
+}
+
+/* 01 */
+.grid-con01 {
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 5px;
+  row-gap: 25px;
+}
+
+/* 02 */
+.grid-con02 {
+  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-columns: 1fr 1fr 2fr;
+  row-gap: 6px;
+}
+
+/* 03 */
+.grid-con03 {
+  grid-template-columns: [first-col] 200px [col-2] auto [third-col] 1fr [final-col] 3fr; 
+  grid-template-rows: repeat(2, 1fr [my-row]) 200px;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+/* 04 */
+.grid-con04 .item01{
+  grid-area: header;
+}
+
+.grid-con04 .item02 {
+  grid-area: main;
+}
+
+.grid-con04 .item03 {
+  grid-area: sidebar;
+}
+
+.grid-con04 .item04 {
+  grid-area: footer;
+}
+
+.grid-con04 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 3fr 1fr;
+  gap: 5px;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+
+/* 05 */
+.grid-con05 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 200px);
+  justify-items: center;
+  align-items: end;
+}
+
+/* 06 */
+.grid-con06 {
+  grid-template-columns: repeat(3, 200px);
+  justify-content: space-between;
+  gap: 5px;
+}
+
+/* 07 */
+.grid-con07 {
+  height: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 30px);
+  align-content: space-around;
+  gap: 5px;
+}
+
+/* 08 */
+.grid-con08 {
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: 40px;
+  grid-auto-rows: 100px;
+  grid-auto-columns: 50px;
+}
+
+.grid-con08 .item01 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.grid-con08 .item02 {
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+
+/* 09 */
+.grid-con09 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  grid-auto-flow: column; /* default row */
+  gap: 5px;
+}
+
+.grid-con09 .item01 {
+  grid-row: 1/4;
+  grid-column: 1;
+}
+
+.grid-con09 .item05 {
+  grid-row: 1/4;
+  grid-column: 4;
+}
+
+/* 10 */
+.grid-con10 {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* This is better for small screens, once min() is better supported */
+  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+}
+
+/* 11 */
+.grid-con11 {
+  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  grid-template-rows: 100px;
+  grid-gap: 20px;
+  transition: all 0.25s;
+}
+
+.maximize:hover .grid-con11 {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-rows: 200px;
+  grid-gap: 10px;
+  background-color: cadetblue;
+}
