@@ -12,8 +12,13 @@
   - [this is text](url)
 
 ## Details
+### Description
+
+<br/>
 
 ### Target
+
+<br/>
 
 ### Examples
 
@@ -26,5 +31,7 @@
 >>input: testttt
 >>
 >>output: testtttt
+
+<br/>
 
 ### Note
