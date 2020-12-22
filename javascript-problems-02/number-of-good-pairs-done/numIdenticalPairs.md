@@ -19,10 +19,6 @@
   Return the number of good pairs.
 <br/>
 
-### Target
-
-<br/>
-
 ### Examples
 
 > 01:

@@ -16,21 +16,33 @@
 
 <br/>
 
-### Target
-
-<br/>
-
 ### Examples
 
-> 01:
->>input: testttt
+> **`01`**
+>>**Input :**
 >>
->>output: testtttt
+>>      input01 test
+>>
+>>**Output :**
+>>
+>>      output01 test
+>>
+>>**Explanation :** 
+>>
+>> - explanation test
+>> - explanation test 02
 >
-> 02:
->>input: testttt
+> **`02`**
+>>**Input :**
 >>
->>output: testtttt
+>>      input02 test
+>>
+>>**Output :**
+>>
+>>      output02 test
+>>
+>
+
 
 <br/>
 

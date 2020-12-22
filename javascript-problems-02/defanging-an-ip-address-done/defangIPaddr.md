@@ -19,8 +19,6 @@
 
 <br/>
 
-### Target
-
 ### Examples
 
 > 01:

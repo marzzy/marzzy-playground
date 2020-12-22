@@ -18,10 +18,6 @@ You own a Goal Parser that can interpret a string command. The command consists 
 Given the string command, return the Goal Parser's interpretation of command.
 <br/>
 
-### Target
-
-<br/>
-
 ### Examples
 
 > 01:
