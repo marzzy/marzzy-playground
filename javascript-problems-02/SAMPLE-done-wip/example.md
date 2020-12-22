@@ -7,9 +7,9 @@
 - Problem Source:
   - Leetcode/Codewar/Interview Question
 - Problem Difficalty
-  - easy/mid/hard
+  - Easy/Medium/Hard
 - Source Link:
-  - [this is text](url)
+  - [ID: ](url)
 
 ## Details
 ### Description
@@ -47,3 +47,6 @@
 <br/>
 
 ### Note
+
+- this isa note
+- this is another one
