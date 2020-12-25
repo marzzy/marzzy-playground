@@ -9,12 +9,13 @@
 - Problem Difficalty
   - Easy/Medium/Hard
 - Source Link:
-  - [ID: ](url)
+  - [ID:](url)
 
 ## Details
+
 ### Description
 
-<br/>
+&nbsp;
 
 ### Examples
 
@@ -27,7 +28,7 @@
 >>
 >>      output01 test
 >>
->>**Explanation :** 
+>>**Explanation :**
 >>
 >> - explanation test
 >> - explanation test 02
@@ -43,10 +44,9 @@
 >>
 >
 
+&nbsp;
 
-<br/>
-
-### Note
+### Constraints
 
 - this isa note
 - this is another one
