@@ -8,15 +8,15 @@ function smallerNumbersThanCurrent(nums) {
       //result[index] = smallerCounter
     //smallerCounter += index.lenght
 
-  let uniqSortedItemsMap = {} ,smallerCounter = 0, result = [];
+  let uniqSortedItems = {} ,smallerCounter = 0, result = [];
 
   nums.forEach((num, numIndex) => {
-    uniqSortedItemsMap[num] = uniqSortedItemsMap[num]
-      ? [...uniqSortedItemsMap[num], numIndex]
+    uniqSortedItems[num] = uniqSortedItems[num]
+      ? [...uniqSortedItems[num], numIndex]
       : [numIndex]
   });
 
-  Object.values(uniqSortedItemsMap).forEach(indexArray => {
+  Object.values(uniqSortedItems).forEach(indexArray => {
     indexArray.forEach(numIndex => result[numIndex] = smallerCounter);
     smallerCounter += indexArray.length;
   });
