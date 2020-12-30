@@ -6,9 +6,9 @@ function countSmaller(nums) {
       sortedUniqueNums[num].push(index);
       return 0;
     }
-    sortedUniqueNums[num] = [index];
+    sortedUniqueNums[+num] = [index];
   })
-
+console.log(sortedUniqueNums)
   result.length = nums.length;
   result.fill(0);
   Object.values(sortedUniqueNums).forEach(numIndexes => {
@@ -53,4 +53,5 @@ function countSmaller(nums) {
 // [0(f), 3(`f`), 2(f), 0(f), 1, 0(f)]
 // [0(f), 3(f), 2(f), 0(f), 1(`f`), 0(f)]
 
-console.log('([0,3,2,0,1,0]): ', countSmaller([1,5,2,1,6,1]));
+// console.log('([0,3,2,0,1,0]): ', countSmaller([1,5,2,1,6,1]));
+console.log('([1,0]): ', countSmaller([-1, -2]));
