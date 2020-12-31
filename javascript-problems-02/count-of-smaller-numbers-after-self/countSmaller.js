@@ -1,6 +1,10 @@
 function countSmaller(nums) {
   let sortedUniqueNums = {}, result=[], passedIndex = new Set();
+  let minimum = nums.reduce((min, num) => (num < min) ? num : min, nums[0]);
 
+  if (minimum < 0) {
+    nums = nums.map(item => item += Math.abs(minimum));
+  }
   nums.forEach((num, index) => {
     if (sortedUniqueNums[num]) {
       sortedUniqueNums[num].push(index);
@@ -8,7 +12,7 @@ function countSmaller(nums) {
     }
     sortedUniqueNums[+num] = [index];
   })
-console.log(sortedUniqueNums)
+
   result.length = nums.length;
   result.fill(0);
   Object.values(sortedUniqueNums).forEach(numIndexes => {
@@ -20,12 +24,15 @@ console.log(sortedUniqueNums)
         }
         return count;
       })
-      console.log('numIndex , result: ',numIndex , result)
     })
   })
   return result;
 };
 
+
+//find min value between the nums
+// if it was x and <0
+  // add x to all of the item so no mines item left between nums
 
 //sortedUiqe data structure 
 // const sortedUiqe = {
@@ -53,5 +60,5 @@ console.log(sortedUniqueNums)
 // [0(f), 3(`f`), 2(f), 0(f), 1, 0(f)]
 // [0(f), 3(f), 2(f), 0(f), 1(`f`), 0(f)]
 
-// console.log('([0,3,2,0,1,0]): ', countSmaller([1,5,2,1,6,1]));
+console.log('([0,3,2,0,1,0]): ', countSmaller([1,5,2,1,6,1]));
 console.log('([1,0]): ', countSmaller([-1, -2]));
