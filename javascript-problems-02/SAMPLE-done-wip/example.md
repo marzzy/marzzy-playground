@@ -6,7 +6,7 @@
   - Node/Browser
 - Problem Source:
   - Leetcode/Codewar/Interview Question
-- Problem Difficalty
+- Problem Difficulty
   - Easy/Medium/Hard
 - Source Link:
   - [ID:](url)

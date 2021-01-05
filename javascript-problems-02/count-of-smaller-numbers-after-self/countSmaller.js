@@ -52,7 +52,6 @@ function countSmaller(nums) {
         // result[i][1]++
 //make an array of result[i][0] and return it
 
-
 // [0(`f`), 0, 0, 0, 0, 0]
 // [0(f), 0+1, 0+1, 0(`f`), 0, 0]
 // [0(f), 1+1, 1+1, 0(f), 0+1, 0(`f`)]
