@@ -8,7 +8,22 @@ function countConsistentStrings(allowed, words) {
       // go to next char
       // if this is the last char
         // counter++
+  const hashSet = new Set([...allowed]);
 
+  return words.reduce((counter, item) => {
+    const wordSet = new Set([...item]);
+    const newUniqWord = [...wordSet.keys()].join('');
+
+    for(let i =0; i < newUniqWord.length; i++ ) {
+      if(!hashSet.has(newUniqWord.charAt(i))) {
+        break;
+      }
+      if (i === newUniqWord.length -1) {
+        counter++;
+      }
+    }
+    return counter;
+  }, 0)
 };
 
 console.log('(2): ', countConsistentStrings("ab", ["ad","bd","aaab","baa","badab"]));
