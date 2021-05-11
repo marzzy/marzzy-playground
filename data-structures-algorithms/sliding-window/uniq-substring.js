@@ -6,12 +6,14 @@ function uniqSubstring(str) {
   let tmp={};
   let startPointer = 0;
   let startDynamicMax = [0,0];
+  const stringLength = str.length;
 
   // 3. loop over str chars while j < array.length
-  for(let dynamicPointer=0 ;dynamicPointer<str.length ; dynamicPointer++) {
+  for(let dynamicPointer=0 ;dynamicPointer<stringLength ; dynamicPointer++) {
     // 3.a. if char is not in the obj keys || char is in the obj keys but its value is less than i
       // obj[char] = char index
     const char = str[dynamicPointer];
+
     if (!(char in tmp) || tmp[char] < startPointer) {
       tmp[char] = dynamicPointer;
     } else {
@@ -21,13 +23,18 @@ function uniqSubstring(str) {
       if (startDynamicMax[1]-startDynamicMax[0] < dynamicPointer-1-startPointer) {
         startDynamicMax = [startPointer, dynamicPointer-1];
       }
-      startPointer = tmp[char] + 1
+      startPointer = tmp[char] + 1;
+      tmp[char] = dynamicPointer;
     }
-    // 3.c. j++
-    ++dynamicPointer;
+
+    // 4. check if it is the last char is it needed to update startDynamicMax or not
+    if (dynamicPointer === stringLength-1 && (startDynamicMax[1]-startDynamicMax[0] < dynamicPointer-startPointer)) {
+        startDynamicMax = [startPointer, stringLength];
+    }
   }
-  return str.slice(...startDynamicMax);
-  // 4. return the string on maxI-J
+
+  // 5. return the string on maxI-J
+  return str.slice(startDynamicMax[0], startDynamicMax[1]+1);
 }
 
 console.log('abc:             ', uniqSubstring('abccaad'));
@@ -36,10 +43,9 @@ console.log('a:               ', uniqSubstring('aaaaaaaa'))
 console.log(':                ', uniqSubstring(''))
 
 
-// maxI&J: [i,j] > should be update when i wants to change
-// tempres: {a: 0,b: 9,c: 7, d:3, e: 4,f:5,g:6, h:8,}
-// loopindex: 7
-//                     j
-//        i
-// 'a b c d e f g c h  b  j   k'
+// maxI&J: [0,2]
+// tempres: {a: 5,b: 1,c: 3, d: 6}
+//              j
+//            i
+// 'a b c c a a d'
 // .0,1,2,3,4,5,6,7,8, 9, 10, 11.
