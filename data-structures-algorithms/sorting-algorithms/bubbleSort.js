@@ -3,9 +3,9 @@ function swap(arr, ind1,ind2){
 }
 
 function bubbleSort(arr) {
-  for(let pointer = 0; pointer <arr.length; pointer++){
+  for(let pointer = arr.length; pointer > 0; pointer--){
     let isNotSorted = false;
-    for(let innerPointer = 0; innerPointer <arr.length -1; innerPointer++) {
+    for(let innerPointer = 0; innerPointer < pointer -1; innerPointer++) {
       if(arr[innerPointer] > arr[innerPointer+1]) {
         swap(arr, innerPointer, innerPointer+1);
         isNotSorted=true;
