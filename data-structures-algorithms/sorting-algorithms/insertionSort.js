@@ -28,7 +28,7 @@ function insertionSort(arr) {
   for(let outerCounter = 1; outerCounter<arr.length; outerCounter++) {
     const item = arr[outerCounter];
     for(let innerCounter = outerCounter-1; innerCounter > -2; innerCounter--) {
-      if(arr[innerCounter] && arr[innerCounter] > item) {
+      if(arr[innerCounter] !== undefined && arr[innerCounter] > item) {
         arr[innerCounter+1] = arr[innerCounter];
       } else {
         arr[innerCounter+1] = item;
@@ -39,10 +39,9 @@ function insertionSort(arr) {
   return arr;
 }
 
-// console.log(insertionSort([0,0,0]));
-// console.log(insertionSort([1,2,3]));
-// console.log(insertionSort([6,5,4]));
-//TODO: check whats wrong with this item ??
+console.log(insertionSort([0,0,0]));
+console.log(insertionSort([1,2,3]));
+console.log(insertionSort([6,5,4]));
 console.log(insertionSort([25,0,-1,10,2]));
-// console.log(insertionSort([25,0,7,10,2]));
-// console.log(insertionSort([0,2,3,4,5,70,10]));
+console.log(insertionSort([25,0,7,10,2]));
+console.log(insertionSort([0,2,3,4,5,70,10]));
