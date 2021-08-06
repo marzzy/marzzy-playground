@@ -1,3 +1,4 @@
+// notice : we assume that passenger visit each place only once
 
 function getRoute(tickets){
   // const srcIndex = {JPN: 0, 'BRA: 1, ...} 
@@ -12,8 +13,6 @@ function getRoute(tickets){
     // let path = [item]
     const [src, dest] = tickets[counter];
     let path = [src, dest];
-
-    // TODO: handle if there is more than 1 index for item
 
     function makepath(nextTicketSrc){
       // dest =  srcIndex[item];
@@ -38,6 +37,7 @@ function getRoute(tickets){
       continue;
     }
   }
+  return "there is no path that visit all of the places";
 }
 
 console.log('USA,BRA,UAE,JPN,PHL : ', getRoute([
@@ -45,4 +45,8 @@ console.log('USA,BRA,UAE,JPN,PHL : ', getRoute([
   ['BRA', 'UAE'],
   ['USA', 'BRA'],
   ['UAE', 'JPN']]));
-console.log('nothing : ', getRoute([]));
+console.log('no path : ', getRoute([
+  ['JPN', 'PHL'],
+  ['USA', 'BRA'],
+  ['UAE', 'JPN']]));
+console.log('no path : ', getRoute([]));
