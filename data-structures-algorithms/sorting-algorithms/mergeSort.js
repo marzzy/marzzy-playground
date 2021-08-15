@@ -5,7 +5,11 @@ function merge(arrA, arrB) {
   let pointerB = 0;
   let result = [];
   // while(PA < arrA.length && PB < ArrB.length)
-  while(pointerA <= arrA.length && pointerB <= arrB.length && (arrA[pointerA] || arrB[pointerB])) {
+  while(
+    pointerA <= arrA.length && 
+    pointerB <= arrB.length && 
+    (arrA[pointerA] !== undefined || arrB[pointerB] !== undefined)
+  ) {
     // if (arrA[PA] < ArrB[PB]) 
       // result.push(arrA[PA]) & PA++
     // else 
@@ -24,12 +28,22 @@ function merge(arrA, arrB) {
   return result;
 }
 
-console.log('[]', merge([], []));
-console.log('[1,2,3,4,5]', merge([1,2,3], [4,5]));
-console.log('[1,2,3,4,5]', merge([1,2,3, 4, 5], []));
-console.log('[1,2,3,4,5]', merge([],[1,2,3, 4, 5]));
-console.log('[1,2,3,4,5]', merge([1,2],[3, 4, 5]));
-console.log('[1,2,3,4,5]', merge([1,3, 5], [2,4]));
-console.log('[1,2,3,4,5]', merge([2,4], [1,3, 5]));
-console.log('[1,2,3,4,5]', merge([5], [1,2,3, 4]));
-console.log('[1,2,3,4,5]', merge([4,5], [1,2,3]));
+function mergeSort(arr) {
+  // break up the arr to halves till theier length was 1
+  // merge them up
+  if(arr.length <= 1 ) return arr;
+  
+  const midPoint = Math.ceil(arr.length/2);
+
+  let left = mergeSort(arr.slice(0, midPoint));
+  let right = mergeSort(arr.slice(midPoint));
+
+  return merge(left, right);
+}
+
+console.log(mergeSort([0,0,0]));
+console.log(mergeSort([1,2,3, 4]));
+console.log(mergeSort([3,2,1]));
+console.log(mergeSort([25,0,-1,10,2]));
+console.log(mergeSort([25,0,7,10,2]));
+console.log(mergeSort([0,2,3,4,5,70,10]));
