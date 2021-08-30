@@ -40,15 +40,15 @@ function radixSort(arr) {
   do {
     helperRes = radixHelper(helperRes.arr || arr, counter);
     counter++;
-  } while(helperRes.done);
+  } while(!helperRes.done);
 
   return helperRes.arr;
 }
 
-// console.log(radixSort([0,0,0]));
-// console.log(radixSort([1,2,3]));
-// console.log(radixSort([3,2,1]));
-// console.log(radixSort([25,0,10,2]));
-// console.log(radixSort([25,0,7,10,2]));
-// console.log(radixSort([0,2,3,4,5,70,10]));
+console.log(radixSort([0,0,0]));
+console.log(radixSort([1,2,3]));
+console.log(radixSort([3,2,1]));
+console.log(radixSort([25,0,10,2]));
+console.log(radixSort([25,0,7,10,2]));
+console.log(radixSort([0,2,3,4,5,70,10]));
 console.log(radixSort([100,127,1143,9824,185,70,10,3,0]));
