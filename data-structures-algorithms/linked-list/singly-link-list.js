@@ -150,6 +150,46 @@ class SinglyLinkList {
     this.increaseLength();
     return true;
   }
+
+  remove(nodeIndex){
+    if(nodeIndex < 1 || nodeIndex > this.getLength()) {
+      return null;
+    }
+    if(nodeIndex === 1) {
+      return this.shift().getValue();
+    }
+    if(nodeIndex === this.getLength()) {
+      return this.pop().getValue();
+    }
+    const theNode = this.get(nodeIndex)
+    const previousNode = this.get(nodeIndex-1);
+    const nextNode = this.get(nodeIndex+1);
+    previousNode.setNextNode(nextNode);
+    this.increaseLength(-1);
+    return theNode.getValue();
+  }
+
+  reverse() {
+    function reverseNode(currentNode, tmpNode , pervNode){
+      currentNode.setNextNode(pervNode);
+      if(!tmpNode) {
+        this.setHead(currentNode);
+        return true;
+      }
+      if(!pervNode) {
+        this.setTail(currentNode);
+      }
+      reverseNode.bind(this, tmpNode, tmpNode.getNextNode(), currentNode)();
+    }
+
+    if(this.getHead()) {
+      reverseNode.bind(this, this.getHead(),this.getHead().getNextNode(), null)();
+      return this;
+    }
+    return this;
+  }
+
+   //TODO: add traverse method using generators
 }
 
 module.exports = { SNode, SinglyLinkList };
