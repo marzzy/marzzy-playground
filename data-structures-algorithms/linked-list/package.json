@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "dependencies": {
+    "jest": "27.1.0",
+    "jest-cli": "27.0.1"
+  },
+  "name": "linked-list",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "author": "marzzy.m@gmail.com",
+  "license": "ISC"
+}
