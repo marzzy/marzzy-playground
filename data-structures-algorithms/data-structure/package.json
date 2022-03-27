@@ -8,8 +8,8 @@
   "version": "1.0.0",
   "devDependencies": {},
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "test": "jest --watch --coverage",
+    "testAll": "jest --watchAll --coverage"
   },
   "author": "marzzy.m@gmail.com",
   "license": "ISC"

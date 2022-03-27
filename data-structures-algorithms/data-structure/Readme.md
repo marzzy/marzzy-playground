@@ -6,5 +6,7 @@ This is a simple implementation of linked list data structure in javascript (usi
 
 ## Run tests
 
-- run `yarn test` to run the tests
-- run `yarn coverage` to display coverage in terminal + create coverage folder that contains its html view
+- run `yarn test` to only run tests related to changed files
+- run `yarn testAll` to run all test
+
+***Notice :*** on running tests it will also display coverage in terminal + create and update `coverage` folder that contains its html view
