@@ -1,8 +1,15 @@
 # Data Structure implementation in javascript
 
-## Linked list
+## 1. Linked list
 
-This is a simple implementation of linked list data structure in javascript (using class)
+- A linked list is a linear collection of data elements whose order is not given by their physical placement in memory.Instead, each element points to the next.
+- [Read more about linked list](https://en.wikipedia.org/wiki/Linked_list)
+
+## 2. Binary search tree
+
+- A binary search tree (BST), also called an `ordered` or `sorted binary tree`, is a rooted binary tree data structure whose internal nodes each store a key greater than all the keys in the node's left subtree and less than those in its right subtree.
+- The time complexity of operations on the binary search tree is directly proportional to the height of the tree.
+- [Read more about binary search trees](https://en.wikipedia.org/wiki/Binary_search_tree)
 
 ## Run tests
 
