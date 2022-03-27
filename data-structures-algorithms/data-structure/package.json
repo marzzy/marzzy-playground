@@ -4,7 +4,7 @@
     "jest": "27.1.0",
     "jest-cli": "27.0.1"
   },
-  "name": "linked-list",
+  "name": "data-structure-implementation",
   "version": "1.0.0",
   "devDependencies": {},
   "scripts": {

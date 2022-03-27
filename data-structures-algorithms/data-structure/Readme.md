@@ -1,4 +1,6 @@
-# Linked list
+# Data Structure implementation in javascript
+
+## Linked list
 
 This is a simple implementation of linked list data structure in javascript (using class)
 
