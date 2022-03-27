@@ -1,8 +1,8 @@
 {
   "type": "module",
   "dependencies": {
-    "jest": "27.1.0",
-    "jest-cli": "27.0.1"
+    "jest": "27.5.1",
+    "jest-cli": "27.5.1"
   },
   "name": "data-structure-implementation",
   "version": "1.0.0",
